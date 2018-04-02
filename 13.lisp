@@ -1,8 +1,8 @@
 (defun list_to_set(L)
+((lambda (x y)
   (cond
    ((null L) nil)
-   ((member (car L)(cdr L)) (list_to_set(cdr L)))
-   (T (cons (car L)(list_to_set (cdr L))))))
-
+   ((member x y) (list_to_set y))
+   (T (cons x (list_to_set y))))) (car L) (cdr L)))
                   
                   
